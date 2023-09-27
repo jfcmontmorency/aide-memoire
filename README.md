@@ -53,12 +53,14 @@ function exemplePasReaffectation() {
 ```javascript
 // <div id="monElement"></div>
 const element = document.getElementById("monElement");
+// string
 ```
 
 ```javascript
 // <div class="maClasse"></div>
 // <div class="maClasse"></div>
 const elements = document.getElementsByClassName("maClasse");
+// HTMLCollection
 ```
 
 ```javascript
@@ -66,32 +68,38 @@ const elements = document.getElementsByClassName("maClasse");
 // <p>Paragraphe 2</p>
 // <p>Paragraphe 3</p>
 const paragraphs = document.getElementsByTagName("p");
+// HTMLCollection
 ```
 
 ```javascript
 // <div class="maClasse"></div>
 const element = document.querySelector(".maClasse");
+// Element
 ```
 
 ```javascript
 // <div class="maClasse"></div>
 // <div class="maClasse"></div>
 const elements = document.querySelectorAll(".maClasse");
+// NodeList
 ```
 
 ```javascript
 // <input type="text" name="monNom" value="Input avec nom">
 const element = document.getElementsByName("monNom")[0];
+// NodeList (utilisé principalement pour les éléments de formulaire)
 ```
 
 ```javascript
 // <div id="monElement"></div>
 const element = document.querySelector("#monElement");
+// Element
 ```
 
 ```javascript
 // <div data-custom="valeur"></div>
 const elements = document.querySelectorAll("[data-custom]");
+// NodeList
 ```
 
 ```javascript
@@ -101,7 +109,37 @@ const elements = document.querySelectorAll("[data-custom]");
 // </div>
 const parentElement = document.getElementById("parent");
 const enfants = parentElement.children;
+// HTMLCollection
 ```
+
+#### Recueillir des informations à partir d'un HTMLCollection, d'un NodeList ou d'un Element.
+
+##### HTMLCollection
+Les HTMLCollection sont similaires aux tableaux (arrays) mais ne possèdent pas toutes les méthodes de tableau. Vous pouvez accéder à leurs éléments en utilisant l'index comme vous le feriez avec un tableau.
+
+```javascript
+const elements = document.getElementsByClassName("maClasse");
+const premierElement = elements[0]; // Accès au premier élément
+const deuxiemeElement = elements[1]; // Accès au deuxième élément, etc.
+```
+
+##### NodeList
+Les NodeList sont également similaires aux tableaux, et vous pouvez accéder à leurs éléments de la même manière.
+
+```javascript
+const elements = document.querySelectorAll(".maClasse");
+const premierElement = elements[0];
+const deuxiemeElement = elements[1];
+```
+
+##### Element
+Les Element représentent un seul élément du DOM, et pour recueillir des informations, vous pouvez utiliser les propriétés et méthodes spécifiques à cet élément. Par exemple, vous pouvez utiliser textContent pour obtenir le contenu textuel de l'élément.
+
+```javascript
+const element = document.getElementById("monElement");
+const contenuTextuel = element.textContent;
+```
+
 
 ### Boucles
 
