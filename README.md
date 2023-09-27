@@ -91,7 +91,7 @@ Boucle for...of : La boucle for...of itère sur les éléments d'une structure d
 
 ```javascript
 const arr = [1, 2, 3];
-for (const element of arr) {
+for (let element of arr) {
   console.log(element);
 }
 ```
