@@ -112,9 +112,9 @@ const enfants = parentElement.children;
 // HTMLCollection
 ```
 
-#### Recueillir des informations à partir d'un HTMLCollection, d'un NodeList ou d'un Element.
+### Élément(s) du DOM
 
-##### HTMLCollection
+#### HTMLCollection
 Les HTMLCollection sont similaires aux tableaux (arrays) mais ne possèdent pas toutes les méthodes de tableau. Vous pouvez accéder à leurs éléments en utilisant l'index comme vous le feriez avec un tableau.
 
 ```javascript
@@ -123,7 +123,7 @@ const premierElement = elements[0]; // Accès au premier élément
 const deuxiemeElement = elements[1]; // Accès au deuxième élément, etc.
 ```
 
-##### NodeList
+#### NodeList
 Les NodeList sont également similaires aux tableaux, et vous pouvez accéder à leurs éléments de la même manière.
 
 ```javascript
@@ -132,7 +132,7 @@ const premierElement = elements[0];
 const deuxiemeElement = elements[1];
 ```
 
-##### Element
+#### Element
 Les Element représentent un seul élément du DOM, et pour recueillir des informations, vous pouvez utiliser les propriétés et méthodes spécifiques à cet élément. Par exemple, vous pouvez utiliser textContent pour obtenir le contenu textuel de l'élément.
 
 ```javascript
