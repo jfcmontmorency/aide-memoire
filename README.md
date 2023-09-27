@@ -48,6 +48,61 @@ function exemplePasReaffectation() {
 // exemplePasReaffectation();
 ```
 
+### Sélecteurs
+
+```javascript
+// <div id="monElement"></div>
+const element = document.getElementById("monElement");
+```
+
+```javascript
+// <div class="maClasse"></div>
+// <div class="maClasse"></div>
+const elements = document.getElementsByClassName("maClasse");
+```
+
+```javascript
+// <p>Paragraphe 1</p>
+// <p>Paragraphe 2</p>
+// <p>Paragraphe 3</p>
+const paragraphs = document.getElementsByTagName("p");
+```
+
+```javascript
+// <div class="maClasse"></div>
+const element = document.querySelector(".maClasse");
+```
+
+```javascript
+// <div class="maClasse"></div>
+// <div class="maClasse"></div>
+const elements = document.querySelectorAll(".maClasse");
+```
+
+```javascript
+// <input type="text" name="monNom" value="Input avec nom">
+const element = document.getElementsByName("monNom")[0];
+```
+
+```javascript
+// <div id="monElement"></div>
+const element = document.querySelector("#monElement");
+```
+
+```javascript
+// <div data-custom="valeur"></div>
+const elements = document.querySelectorAll("[data-custom]");
+```
+
+```javascript
+// <div id="parent">
+//   <div>Enfant 1</div>
+//   <div>Enfant 2</div>
+// </div>
+const parentElement = document.getElementById("parent");
+const enfants = parentElement.children;
+```
+
 ### Boucles
 
 Boucle for : La boucle for est l'une des boucles les plus couramment utilisées. Elle permet de spécifier explicitement la condition de continuation et d'itérer sur un bloc de code un nombre prédéterminé de fois.
