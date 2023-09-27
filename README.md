@@ -26,7 +26,9 @@ function exempleLet() {
 }
 
 // exempleLet();
+```
 
+```javascript
 // Réaffectation de la variable
 function exempleReaffectation() {
   var x = 10;
@@ -102,16 +104,3 @@ arr.forEach((element) => {
   console.log(element);
 });
 ```
-
-Boucle for...await...of : Utilisée avec des opérations asynchrones et des promesses, cette boucle permet d'itérer de manière asynchrone sur des éléments.
-
-```javascript
-async function asyncLoop() {
-  const promises = [asyncFunc1(), asyncFunc2(), asyncFunc3()];
-  for await (const result of promises) {
-    console.log(result);
-  }
-}
-```
-
-
