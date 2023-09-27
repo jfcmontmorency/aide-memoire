@@ -53,14 +53,14 @@ function exemplePasReaffectation() {
 ```javascript
 // <div id="monElement"></div>
 const element = document.getElementById("monElement");
-// string
+// Type : string
 ```
 
 ```javascript
 // <div class="maClasse"></div>
 // <div class="maClasse"></div>
 const elements = document.getElementsByClassName("maClasse");
-// HTMLCollection
+// Type : HTMLCollection
 ```
 
 ```javascript
@@ -68,38 +68,38 @@ const elements = document.getElementsByClassName("maClasse");
 // <p>Paragraphe 2</p>
 // <p>Paragraphe 3</p>
 const paragraphs = document.getElementsByTagName("p");
-// HTMLCollection
+// Type : HTMLCollection
 ```
 
 ```javascript
 // <div class="maClasse"></div>
 const element = document.querySelector(".maClasse");
-// Element
+// Type : Element
 ```
 
 ```javascript
 // <div class="maClasse"></div>
 // <div class="maClasse"></div>
 const elements = document.querySelectorAll(".maClasse");
-// NodeList
+// Type : NodeList
 ```
 
 ```javascript
 // <input type="text" name="monNom" value="Input avec nom">
 const element = document.getElementsByName("monNom")[0];
-// NodeList (utilisé principalement pour les éléments de formulaire)
+// Type : NodeList (utilisé principalement pour les éléments de formulaire)
 ```
 
 ```javascript
 // <div id="monElement"></div>
 const element = document.querySelector("#monElement");
-// Element
+// Type : Element
 ```
 
 ```javascript
 // <div data-custom="valeur"></div>
 const elements = document.querySelectorAll("[data-custom]");
-// NodeList
+// Type : NodeList
 ```
 
 ```javascript
@@ -109,7 +109,7 @@ const elements = document.querySelectorAll("[data-custom]");
 // </div>
 const parentElement = document.getElementById("parent");
 const enfants = parentElement.children;
-// HTMLCollection
+// Type : HTMLCollection
 ```
 
 ### Élément(s) du DOM
