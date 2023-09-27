@@ -1,1 +1,2 @@
 // Script js
+hljs.highlightAll();
