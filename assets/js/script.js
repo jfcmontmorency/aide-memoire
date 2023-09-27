@@ -1,2 +1,0 @@
-// Script js
-hljs.highlightAll();
