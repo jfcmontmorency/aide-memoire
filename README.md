@@ -1,5 +1,3 @@
-# jfcmontmorency.github.io
-
 # Aide mémoire
 
 ## Javascript
