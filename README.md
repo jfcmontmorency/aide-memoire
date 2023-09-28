@@ -295,4 +295,22 @@ const monBool = div.classList.contains("nouvelleClasse");
 // retourne : true
 ```
 
+### Événements 
 
+#### addEventListener
+
+```javascript
+function clicHandler() {
+  console.log('Ça fonctionne! 🔥')
+}
+
+// <button id="monBouton">Cliquez-moi</button>
+const bouton = document.getElementById("monBouton");
+bouton.addEventListener("click", clicHandler);
+```
+
+#### removeEventListener
+
+```javascript
+bouton.removeEventListener("click", clicHandler);
+```
