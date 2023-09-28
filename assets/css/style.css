@@ -1,5 +1,19 @@
 @import url("https://unpkg.com/mvp.css");
-@import url("https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css");
+
+body {
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px;
+    word-wrap: break-word;
+    color: #363636;
+    color: var(--text-main);
+    background: #fff;
+    background: var(--background-body);
+    text-rendering: optimizeLegibility;
+}
+
 
 h1:first-child,
 .footer {
