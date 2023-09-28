@@ -27,7 +27,7 @@ Manipulation du DOM
 Bonne pratiques 
 > https://smnarnold.com/cours/javascript/nommer-ses-variables  
 
-Aide-mémoire 
+Aide-mémoire
 
 ## Exercices
 
