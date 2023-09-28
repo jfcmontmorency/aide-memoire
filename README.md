@@ -1,10 +1,8 @@
-# Aide-mémoire
+# Aide-mémoire JavaScript
 
-## JavaScript
+## Variables
 
-### Variables
-
-#### Différence entre var et let
+### Différence entre var et let
 
 ```javascript
 // Utilisation de var
@@ -50,9 +48,9 @@ function exemplePasReaffectation() {
 // exemplePasReaffectation();
 ```
 
-### Sélecteurs
+## Sélecteurs
 
-#### getElementById
+### getElementById
 
 ```javascript
 // <div id="monElement"></div>
@@ -60,7 +58,7 @@ const element = document.getElementById("monElement");
 // Type : string
 ```
 
-#### getElementsByClassName
+### getElementsByClassName
 
 ```javascript
 // <div class="maClasse"></div>
@@ -69,7 +67,7 @@ const elements = document.getElementsByClassName("maClasse");
 // Type : HTMLCollection
 ```
 
-#### getElementsByTagName
+### getElementsByTagName
 
 ```javascript
 // <p>Paragraphe 1</p>
@@ -79,7 +77,7 @@ const paragraphs = document.getElementsByTagName("p");
 // Type : HTMLCollection
 ```
 
-#### querySelector
+### querySelector
 
 ```javascript
 // <div class="maClasse"></div> <- Sélectionné
@@ -88,7 +86,7 @@ const element = document.querySelector(".maClasse");
 // Type : Element
 ```
 
-#### querySelectorAll
+### querySelectorAll
 
 ```javascript
 // <div class="maClasse"></div>
@@ -97,7 +95,7 @@ const elements = document.querySelectorAll(".maClasse");
 // Type : NodeList
 ```
 
-#### getElementsByName
+### getElementsByName
 
 ```javascript
 // <input type="text" name="monNom" value="Input avec nom">
@@ -105,7 +103,7 @@ const element = document.getElementsByName("monNom")[0];
 // Type : NodeList (utilisé principalement pour les éléments de formulaire)
 ```
 
-#### querySelector
+### querySelector
 
 ```javascript
 // <div class="maClasse"></div> <- Sélectionné
@@ -120,7 +118,7 @@ const element = document.querySelector("#monElement");
 // Type : Element
 ```
 
-#### querySelectorAll
+### querySelectorAll
 
 ```javascript
 // <div data-custom="valeur1"></div>
@@ -129,7 +127,7 @@ const elements = document.querySelectorAll("[data-custom]");
 // Type : NodeList
 ```
 
-#### 
+### 
 
 ```javascript children
 // <div id="parent">
@@ -141,9 +139,9 @@ const enfants = parentElement.children;
 // Type : HTMLCollection
 ```
 
-### Élément(s) du DOM
+## Élément(s) du DOM
 
-#### HTMLCollection
+### HTMLCollection
 Les HTMLCollection sont similaires aux tableaux (arrays) mais ne possèdent pas toutes les méthodes de tableau. Vous pouvez accéder à leurs éléments en utilisant l'index comme vous le feriez avec un tableau.
 
 ```javascript
@@ -152,7 +150,7 @@ const premierElement = elements[0]; // Accès au premier élément
 const deuxiemeElement = elements[1]; // Accès au deuxième élément, etc.
 ```
 
-#### NodeList
+### NodeList
 Les NodeList sont également similaires aux tableaux, et vous pouvez accéder à leurs éléments de la même manière.
 
 ```javascript
@@ -161,7 +159,7 @@ const premierElement = elements[0];
 const deuxiemeElement = elements[1];
 ```
 
-#### Element
+### Element
 Les Element représentent un seul élément du DOM, et pour recueillir des informations, vous pouvez utiliser les propriétés et méthodes spécifiques à cet élément. Par exemple, vous pouvez utiliser textContent pour obtenir le contenu textuel de l'élément.
 
 ```javascript
@@ -169,9 +167,9 @@ const element = document.getElementById("monElement");
 const contenuTextuel = element.textContent;
 ```
 
-### Boucles
+## Boucles
 
-#### Boucle for
+### Boucle for
 La boucle for est l'une des boucles les plus couramment utilisées. Elle permet de spécifier explicitement la condition de continuation et d'itérer sur un bloc de code un nombre prédéterminé de fois.
 
 ```javascript
@@ -180,7 +178,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-#### Boucle while
+### Boucle while
 La boucle while itère tant qu'une condition donnée est vraie. Elle est utilisée lorsque le nombre d'itérations n'est pas connu à l'avance.
 
 ```javascript
@@ -191,7 +189,7 @@ while (i < 5) {
 }
 ```
 
-#### Boucle do...while
+### Boucle do...while
 La boucle do...while est similaire à while, mais elle garantit au moins une exécution du bloc de code, même si la condition est fausse dès le départ.
 
 ```javascript
@@ -202,7 +200,7 @@ do {
 } while (i < 5);
 ```
 
-#### Boucle for...in
+### Boucle for...in
 La boucle for...in itère à travers les propriétés énumérables d'un objet. Elle est principalement utilisée pour parcourir des objets.
 
 ```javascript
@@ -212,7 +210,7 @@ for (let key in obj) {
 }
 ```
 
-#### Boucle for...of
+### Boucle for...of
 La boucle for...of itère sur les éléments d'une structure de données itérable, telle qu'un tableau (array), une chaîne de caractères (string), ou un ensemble (set).
 
 ```javascript
@@ -222,7 +220,7 @@ for (let element of arr) {
 }
 ```
 
-#### Boucle forEach()
+### Boucle forEach()
 Cette méthode est spécifique aux tableaux (Array) et permet d'itérer sur chaque élément du tableau en utilisant une fonction de rappel.
 
 ```javascript
@@ -232,9 +230,9 @@ arr.forEach((element) => {
 });
 ```
 
-### Manipulation du DOM
+## Manipulation du DOM
 
-#### Changer le contenu textuel d'un élément
+### Changer le contenu textuel d'un élément
 
 ```javascript
 // Avant : <p id="monParagraphe">Texte avant la modification</p>
@@ -243,7 +241,7 @@ paragraphe.textContent = "Texte après la modification";
 // Après : <p id="monParagraphe">Texte après la modification</p>
 ```
 
-#### Modifier le contenu HTML d'un élément 
+### Modifier le contenu HTML d'un élément 
 
 ```javascript
 // Avant : <div id="monDiv">Contenu avant la modification</div>
@@ -252,7 +250,7 @@ div.innerHTML = "<p>Contenu après la modification</p>";
 // Après : <div id="monDiv"><p>Contenu après la modification</p></div>
 ```
 
-#### Ajouter un nouvel élément
+### Ajouter un nouvel élément
 
 ```javascript
 // Avant : <ul id="maListe"></ul>
@@ -263,7 +261,7 @@ liste.appendChild(nouvelElement);
 // Après : <ul id="maListe"><li>Nouvel élément ajouté</li></ul>
 ```
 
-#### Supprimer un élément 
+### Supprimer un élément 
 
 ```javascript
 // Avant : <p id="aSupprimer">Texte à supprimer</p>
@@ -272,7 +270,7 @@ elementASupprimer.parentNode.removeChild(elementASupprimer);
 // Après : (l'élément <p> est supprimé du DOM)
 ```
 
-#### Modifier les attributs d'un élément
+### Modifier les attributs d'un élément
 
 ```javascript
 // Avant : <img id="monImage" src="image.jpg" alt="Image">
@@ -282,7 +280,7 @@ image.alt = "Nouvelle image";
 // Après : <img id="monImage" src="nouvelle-image.jpg" alt="Nouvelle image">
 ```
 
-#### Ajouter, supprimer ou questionner la présence de classe CSS
+### Ajouter, supprimer ou questionner la présence de classe CSS
 
 ```javascript
 // Avant : <div id="monDiv" class="ancienneClasse"></div>
@@ -295,9 +293,9 @@ const monBool = div.classList.contains("nouvelleClasse");
 // retourne : true
 ```
 
-### Événements 
+## Événements 
 
-#### addEventListener
+### addEventListener
 
 ```javascript
 function clicHandler() {
@@ -309,7 +307,7 @@ const bouton = document.getElementById("monBouton");
 bouton.addEventListener("click", clicHandler);
 ```
 
-#### removeEventListener
+### removeEventListener
 
 ```javascript
 bouton.removeEventListener("click", clicHandler);
