@@ -4,6 +4,8 @@
 
 ### Variables
 
+#### Différence entre var et let
+
 ```javascript
 // Utilisation de var
 function exempleVar() {
