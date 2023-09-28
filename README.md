@@ -123,7 +123,8 @@ const element = document.querySelector("#monElement");
 #### querySelectorAll
 
 ```javascript
-// <div data-custom="valeur"></div>
+// <div data-custom="valeur1"></div>
+// <div data-custom="valeur2"></div>
 const elements = document.querySelectorAll("[data-custom]");
 // Type : NodeList
 ```
@@ -281,7 +282,7 @@ image.alt = "Nouvelle image";
 // Après : <img id="monImage" src="nouvelle-image.jpg" alt="Nouvelle image">
 ```
 
-#### Ajouter ou supprimer des classes CSS
+#### Ajouter, supprimer ou questionner la présence de classe CSS
 
 ```javascript
 // Avant : <div id="monDiv" class="ancienneClasse"></div>
@@ -289,4 +290,9 @@ const div = document.getElementById("monDiv");
 div.classList.remove("ancienneClasse");
 div.classList.add("nouvelleClasse");
 // Après : <div id="monDiv" class="nouvelleClasse"></div>
+
+const monBool = div.classList.contains("nouvelleClasse");
+// retourne : true
 ```
+
+
