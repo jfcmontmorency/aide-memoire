@@ -14,8 +14,12 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-
 h1:first-child,
 .footer {
     display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
