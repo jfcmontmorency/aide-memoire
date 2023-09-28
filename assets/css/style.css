@@ -1,4 +1,5 @@
-@import url("https://cdn.jsdelivr.net/npm/water.css@2/out/water.css");
+@import url("https://unpkg.com/mvp.css");
+@import url("https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css");
 
 h1:first-child,
 .footer {
