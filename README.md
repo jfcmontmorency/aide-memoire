@@ -1,5 +1,7 @@
 # Aide-mémoire JavaScript
 
+![](./assets/images/split1.jpg)
+
 ## Variables
 
 ### Différence entre var et let
@@ -47,6 +49,7 @@ function exemplePasReaffectation() {
 
 // exemplePasReaffectation();
 ```
+![](./assets/images/split2.jpg)
 
 ## Sélecteurs
 
@@ -127,9 +130,9 @@ const elements = document.querySelectorAll("[data-custom]");
 // Type : NodeList
 ```
 
-### 
+### children
 
-```javascript children
+```javascript
 // <div id="parent">
 //   <div>Enfant 1</div>
 //   <div>Enfant 2</div>
@@ -138,6 +141,8 @@ const parentElement = document.getElementById("parent");
 const enfants = parentElement.children;
 // Type : HTMLCollection
 ```
+
+![](./assets/images/split3.jpg)
 
 ## Élément(s) du DOM
 
@@ -166,6 +171,8 @@ Les Element représentent un seul élément du DOM, et pour recueillir des infor
 const element = document.getElementById("monElement");
 const contenuTextuel = element.textContent;
 ```
+
+![](./assets/images/split4.jpg)
 
 ## Boucles
 
@@ -230,6 +237,8 @@ arr.forEach((element) => {
 });
 ```
 
+![](./assets/images/split5.jpg)
+
 ## Manipulation du DOM
 
 ### Changer le contenu textuel d'un élément
@@ -292,6 +301,8 @@ div.classList.add("nouvelleClasse");
 const monBool = div.classList.contains("nouvelleClasse");
 // retourne : true
 ```
+
+![](./assets/images/split6.jpg)
 
 ## Événements 
 
