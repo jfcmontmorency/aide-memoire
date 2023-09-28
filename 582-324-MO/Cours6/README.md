@@ -4,12 +4,30 @@
 
 - Pas de cours la semaine prochaine 
 - Retour sur le PS2 
-- Wooclap : https://app.wooclap.com/TRCTKC   
+- Wooclap : https://app.wooclap.com/TRCTKC
 - Bases JavaScript, la suite 
 - Exercices 
 - Devoir PS3.1 
 
 ## JavaScript
+
+Boucles
+> https://smnarnold.com/cours/javascript/boucle-for 
+
+Sélecteurs et manipulation 
+>https://smnarnold.com/cours/javascript/queryselector  
+>https://smnarnold.com/cours/javascript/classlist 
+
+Événements 
+> https://smnarnold.com/cours/javascript/attribut-onclick 
+
+Manipulation du DOM 
+> https://smnarnold.com/cours/javascript/manipulation-des-contenus 
+
+Bonne pratiques 
+> https://smnarnold.com/cours/javascript/nommer-ses-variables  
+
+Aide-mémoire 
 
 ## Exercices
 
