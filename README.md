@@ -108,6 +108,13 @@ const element = document.getElementsByName("monNom")[0];
 #### querySelector
 
 ```javascript
+// <div class="maClasse"></div> <- Sélectionné
+// <div class="maClasse"></div> <- Non sélectionné
+const element = document.querySelector(".maClasse");
+// Type : Element
+```
+
+```javascript
 // <div id="monElement"></div>
 const element = document.querySelector("#monElement");
 // Type : Element
