@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/a11y-dark.min.css");
 
 body {
     line-height: 1.4;
