@@ -82,7 +82,8 @@ const paragraphs = document.getElementsByTagName("p");
 #### querySelector
 
 ```javascript
-// <div class="maClasse"></div>
+// <div class="maClasse"></div> <- Sélectionné
+// <div class="maClasse"></div> <- Non sélectionné
 const element = document.querySelector(".maClasse");
 // Type : Element
 ```
