@@ -58,7 +58,7 @@ function exemplePasReaffectation() {
 ```javascript
 // <div id="monElement"></div>
 const element = document.getElementById("monElement");
-// Type : string
+// Type : Element
 ```
 
 ### getElementsByClassName
@@ -106,30 +106,6 @@ const element = document.getElementsByName("monNom")[0];
 // Type : NodeList (utilisé principalement pour les éléments de formulaire)
 ```
 
-### querySelector
-
-```javascript
-// <div class="maClasse"></div> <- Sélectionné
-// <div class="maClasse"></div> <- Non sélectionné
-const element = document.querySelector(".maClasse");
-// Type : Element
-```
-
-```javascript
-// <div id="monElement"></div>
-const element = document.querySelector("#monElement");
-// Type : Element
-```
-
-### querySelectorAll
-
-```javascript
-// <div data-custom="valeur1"></div>
-// <div data-custom="valeur2"></div>
-const elements = document.querySelectorAll("[data-custom]");
-// Type : NodeList
-```
-
 ### children
 
 ```javascript
@@ -140,36 +116,6 @@ const elements = document.querySelectorAll("[data-custom]");
 const parentElement = document.getElementById("parent");
 const enfants = parentElement.children;
 // Type : HTMLCollection
-```
-
-![](./assets/images/split3.jpg)
-
-## Élément(s) du DOM
-
-### HTMLCollection
-Les HTMLCollection sont similaires aux tableaux (arrays) mais ne possèdent pas toutes les méthodes de tableau. Vous pouvez accéder à leurs éléments en utilisant l'index comme vous le feriez avec un tableau.
-
-```javascript
-const elements = document.getElementsByClassName("maClasse");
-const premierElement = elements[0]; // Accès au premier élément
-const deuxiemeElement = elements[1]; // Accès au deuxième élément, etc.
-```
-
-### NodeList
-Les NodeList sont également similaires aux tableaux, et vous pouvez accéder à leurs éléments de la même manière.
-
-```javascript
-const elements = document.querySelectorAll(".maClasse");
-const premierElement = elements[0];
-const deuxiemeElement = elements[1];
-```
-
-### Element
-Les Element représentent un seul élément du DOM, et pour recueillir des informations, vous pouvez utiliser les propriétés et méthodes spécifiques à cet élément. Par exemple, vous pouvez utiliser textContent pour obtenir le contenu textuel de l'élément.
-
-```javascript
-const element = document.getElementById("monElement");
-const contenuTextuel = element.textContent;
 ```
 
 ![](./assets/images/split4.jpg)
@@ -279,6 +225,17 @@ elementASupprimer.parentNode.removeChild(elementASupprimer);
 // Après : (l'élément <p> est supprimé du DOM)
 ```
 
+### Supprimer des enfants
+
+```javascript
+// Avant : <div id="boutons"><button>Bouton1</button><button>Bouton2</button><button>Bouton3</button></div>
+const parent = document.getElementById("boutons");
+while (parent.firstChild) {
+  parent.removeChild(parent.firstChild);
+}
+// Après : <div id="boutons"></div>
+```
+
 ### Modifier les attributs d'un élément
 
 ```javascript
@@ -302,7 +259,7 @@ const monBool = div.classList.contains("nouvelleClasse");
 // retourne : true
 ```
 
-![](./assets/images/split6.jpg)
+![](./assets/images/split3.jpg)
 
 ## Événements 
 
