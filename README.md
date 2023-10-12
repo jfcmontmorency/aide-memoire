@@ -196,7 +196,7 @@ paragraphe.textContent = "Texte après la modification";
 // Après : <p id="monParagraphe">Texte après la modification</p>
 ```
 
-### Modifier le contenu HTML d'un élément 
+### Changer le contenu HTML d'un élément 
 
 ```javascript
 // Avant : <div id="monDiv">Contenu avant la modification</div>
@@ -204,6 +204,33 @@ const div = document.getElementById("monDiv");
 div.innerHTML = "<p>Contenu après la modification</p>";
 // Après : <div id="monDiv"><p>Contenu après la modification</p></div>
 ```
+
+### Ajouter du contenu avec insertAdjacentText
+
+#### beforebegin
+
+```javascript
+// Avant : <div id="monElement">Texte existant</div>
+var element = document.getElementById('monElement');
+element.insertAdjacentText('beforebegin', 'Texte avant l\'élément');
+// Après : 
+// Texte avant l'élément
+// <div id="monElement">Texte existant</div>
+```
+
+Note : afterend fait la même chose, mais aprés l'élément.
+
+#### beforebegin
+
+```javascript
+// Avant : <div id="monElement">Texte existant</div>
+var element = document.getElementById('monElement');
+element.insertAdjacentText('afterbegin', 'Texte au début de l\'élément');
+// Après : 
+// <div id="monElement">Texte au début de l'élémentTexte existant</div>
+```
+
+Note : beforeend fait la même chose, mais a la fin de l'élément.
 
 ### Ajouter un nouvel élément
 
@@ -233,6 +260,15 @@ const parent = document.getElementById("boutons");
 while (parent.firstChild) {
   parent.removeChild(parent.firstChild);
 }
+// Après : <div id="boutons"></div>
+```
+
+### Supprimer tout sous un parent 
+
+```javascript
+// Avant : <div id="boutons"><button>Bouton1</button><button>Bouton2</button><button>Bouton3</button></div>
+const parent = document.getElementById("boutons");
+parent.innerHTML = '';
 // Après : <div id="boutons"></div>
 ```
 
@@ -277,6 +313,7 @@ bouton.addEventListener("click", clicHandler);
 
 ### removeEventListener
 
+Pour retirer un EventListener il faut spécifier la fonction.
 ```javascript
 bouton.removeEventListener("click", clicHandler);
 ```
