@@ -187,7 +187,7 @@ arr.forEach((element) => {
 
 ## Manipulation du DOM
 
-### Changer le contenu textuel d'un élément
+### textContent : Changer le contenu textuel d'un élément
 
 ```javascript
 // Avant : <p id="monParagraphe">Texte avant la modification</p>
@@ -196,7 +196,7 @@ paragraphe.textContent = "Texte après la modification";
 // Après : <p id="monParagraphe">Texte après la modification</p>
 ```
 
-### Changer le contenu HTML d'un élément 
+### innerHTML : Changer le contenu HTML d'un élément 
 
 ```javascript
 // Avant : <div id="monDiv">Contenu avant la modification</div>
@@ -205,32 +205,31 @@ div.innerHTML = "<p>Contenu après la modification</p>";
 // Après : <div id="monDiv"><p>Contenu après la modification</p></div>
 ```
 
-### Ajouter du contenu avec insertAdjacentText
+### insertAdjacentText: Ajouter du contenu avec insertAdjacentText
 
-#### beforebegin
+#### Exemples
 
 ```javascript
 // Avant : <div id="monElement">Texte existant</div>
 var element = document.getElementById('monElement');
-element.insertAdjacentText('beforebegin', 'Texte avant l\'élément');
+element.insertAdjacentText('beforebegin', 'Texte avant l’élément');
 // Après : 
 // Texte avant l'élément
 // <div id="monElement">Texte existant</div>
 ```
 
-Note : afterend fait la même chose, mais aprés l'élément.
-
-#### beforebegin
-
 ```javascript
 // Avant : <div id="monElement">Texte existant</div>
 var element = document.getElementById('monElement');
-element.insertAdjacentText('afterbegin', 'Texte au début de l\'élément');
+element.insertAdjacentText('afterbegin', 'Texte avant l’élément');
 // Après : 
-// <div id="monElement">Texte au début de l'élémentTexte existant</div>
+// <div id="monElement">Texte avant l'élémentTexte existant</div>
 ```
 
-Note : beforeend fait la même chose, mais a la fin de l'élément.
+beforebegin : Avant le elementlui-même.
+afterbegin : Juste à l'intérieur du element, avant son premier enfant.
+beforeend : Juste à l'intérieur du element, après son dernier enfant.
+afterend : Après le elementlui-même.
 
 ### Ajouter un nouvel élément
 
