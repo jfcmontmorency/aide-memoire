@@ -226,10 +226,10 @@ element.insertAdjacentText('afterbegin', 'Texte avant l’élément');
 // <div id="monElement">Texte avant l'élémentTexte existant</div>
 ```
 
-- beforebegin : Avant le elementlui-même.
-- afterbegin : Juste à l'intérieur du element, avant son premier enfant.
-- beforeend : Juste à l'intérieur du element, après son dernier enfant.
-- afterend : Après le elementlui-même.
+- beforebegin : À l'extérieur de l'element, avant
+- afterbegin : À l'intérieur de l'element, avant son premier enfant ou texte.
+- beforeend : À l'intérieur de l'element, après son dernier enfant ou texte.
+- afterend : À l'extérieur de l'element, après
 
 ### Ajouter un nouvel élément
 
@@ -313,6 +313,7 @@ bouton.addEventListener("click", clicHandler);
 ### removeEventListener
 
 Pour retirer un EventListener il faut spécifier la fonction.
+
 ```javascript
 bouton.removeEventListener("click", clicHandler);
 ```
