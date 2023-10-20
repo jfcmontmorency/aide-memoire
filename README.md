@@ -317,3 +317,16 @@ Pour retirer un EventListener il faut spécifier la fonction.
 ```javascript
 bouton.removeEventListener("click", clicHandler);
 ```
+
+## This
+
+`this` est un mot-clé en JavaScript qui fait référence à l'objet actuel sur lequel une fonction est appelée. Son comportement dépend du contexte d'appel.
+
+```javascript
+//<div id="monElement">Cliquez sur moi !</div>
+const monElement = document.getElementById('monElement');
+monElement.addEventListener('click', function() {
+  const id = this.id; // 'monElement'
+  clickedElement.classList.add('highlight'); // Ajoute une classe "highlight" à l'élément
+});
+```
