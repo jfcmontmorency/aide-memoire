@@ -227,8 +227,11 @@ element.insertAdjacentText('afterbegin', 'Texte avant l’élément');
 ```
 
 beforebegin : Avant le elementlui-même.
+
 afterbegin : Juste à l'intérieur du element, avant son premier enfant.
+
 beforeend : Juste à l'intérieur du element, après son dernier enfant.
+
 afterend : Après le elementlui-même.
 
 ### Ajouter un nouvel élément
