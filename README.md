@@ -327,6 +327,6 @@ bouton.removeEventListener("click", clicHandler);
 const monElement = document.getElementById('monElement');
 monElement.addEventListener('click', function() {
   const id = this.id; // 'monElement'
-  clickedElement.classList.add('highlight'); // Ajoute une classe "highlight" à l'élément
+  this.classList.add('highlight'); // Ajoute une classe "highlight" à l'élément
 });
 ```
