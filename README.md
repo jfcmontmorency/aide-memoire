@@ -205,12 +205,11 @@ console.log(bloc.classList.contains("actif"));
 // Résultat : true
 ```
 
-!!! info "Différences à connaître"
-
-    - `textContent` → texte brut (inclut le texte caché)  
-    - `innerText` → texte visible seulement  
-    - `innerHTML` → contenu HTML interne (avec balises)  
-    - `outerHTML` → l’élément complet (balises + contenu)  
+> [!TIP]
+> `textContent` → texte brut (inclut le texte caché)  
+> `innerText` → texte visible seulement  
+> `innerHTML` → contenu HTML interne (avec balises)  
+> `outerHTML` → l’élément complet (balises + contenu)  
 
 ![](./assets/images/split3.jpg)
 
