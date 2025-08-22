@@ -4,51 +4,32 @@
 
 ## Variables
 
-### Différence entre var et let
+Une **variable** c'est comme une boîte dans laquelle on range une valeur.
+
+- `var` : (ancienne façon) La variable existe partout dans la fonction
+- `let` : La variable n’existe **que dans le bloc** où elle est créée. Plus sécuritaire.  
+- `const` : La variable agit comme let, mais ne peut être remplacée par une autre valeur dans le code.
 
 ```javascript
-// Utilisation de var
+// Exemple avec var
 function exempleVar() {
   if (true) {
     var message = "Hello, var!";
   }
-
-  console.log(message); // "Hello, var!" est affiché, même à l'extérieur du bloc if
+  console.log(message); // fonctionne malgré tout
 }
 
-exempleVar();
-
-// Utilisation de let
+// Exemple avec let
 function exempleLet() {
   if (true) {
     let message = "Hello, let!";
   }
-
-  // console.log(message); // Cela générera une "ReferenceError" car message n'est pas défini ici
+  // console.log(message); // Erreur ! message n’existe plus
 }
-
-// exempleLet();
 ```
 
-```javascript
-// Réaffectation de la variable
-function exempleReaffectation() {
-  var x = 10;
-  var x = 20; // La réaffectation avec "var" est autorisée
+👉 **Conseil : utilisez `let` (ou `const`) au lieu de `var`.**
 
-  console.log(x); // Affiche 20
-}
-
-exempleReaffectation();
-
-// Réaffectation de la variable avec let
-function exemplePasReaffectation() {
-  let y = 10;
-  // let y = 20; // Cela générera une "SyntaxError" car vous ne pouvez pas réaffecter une variable "let" dans la même portée
-}
-
-// exemplePasReaffectation();
-```
 ![](./assets/images/split2.jpg)
 
 ## Sélecteurs
