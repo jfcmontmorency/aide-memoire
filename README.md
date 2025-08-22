@@ -152,114 +152,65 @@ Les boucles [while](https://www.w3schools.com/js/js_loop_while.asp) fonctionnent
 
 ![](./assets/images/split5.jpg)
 
-## Manipulation du DOM
+## Manipulation du DOM (HTML)
 
-### textContent : Changer le contenu textuel d'un élément
+### Modifier du texte
 
 ```javascript
-// Avant : <p id="monParagraphe">Texte avant la modification</p>
-const paragraphe = document.getElementById("monParagraphe");
-paragraphe.textContent = "Texte après la modification";
-// Après : <p id="monParagraphe">Texte après la modification</p>
+// Avant : <p id="monParagraphe">Avant</p>
+const p = document.getElementById("monParagraphe");
+p.textContent = "Après";
+// Après : <p id="monParagraphe">Après</p>
 ```
 
-### innerHTML : Changer le contenu HTML d'un élément 
+### Modifier du HTML (ajouter du code HTML à l’intérieur)
 
 ```javascript
-// Avant : <div id="monDiv">Contenu avant la modification</div>
+// Avant : <div id="monDiv">Avant</div>
 const div = document.getElementById("monDiv");
-div.innerHTML = "<p>Contenu après la modification</p>";
-// Après : <div id="monDiv"><p>Contenu après la modification</p></div>
+div.innerHTML = "<strong>Texte en gras</strong>";
+// Après : <div id="monDiv"><strong>Texte en gras</strong></div>
 ```
 
-### insertAdjacentText: Ajouter du contenu avec insertAdjacentText
-
-#### Exemples
-
-```javascript
-// Avant : <div id="monElement">Texte existant</div>
-var element = document.getElementById('monElement');
-element.insertAdjacentText('beforebegin', 'Texte avant l’élément');
-// Après : 
-// Texte avant l'élément
-// <div id="monElement">Texte existant</div>
-```
-
-```javascript
-// Avant : <div id="monElement">Texte existant</div>
-var element = document.getElementById('monElement');
-element.insertAdjacentText('afterbegin', 'Texte avant l’élément');
-// Après : 
-// <div id="monElement">Texte avant l'élémentTexte existant</div>
-```
-
-- beforebegin : À l'extérieur de l'element, avant
-- afterbegin : À l'intérieur de l'element, avant son premier enfant ou texte.
-- beforeend : À l'intérieur de l'element, après son dernier enfant ou texte.
-- afterend : À l'extérieur de l'element, après
-
-### Ajouter un nouvel élément
+### Ajouter un élément
 
 ```javascript
 // Avant : <ul id="maListe"></ul>
 const liste = document.getElementById("maListe");
-const nouvelElement = document.createElement("li");
-nouvelElement.textContent = "Nouvel élément ajouté";
-liste.appendChild(nouvelElement);
-// Après : <ul id="maListe"><li>Nouvel élément ajouté</li></ul>
+const item = document.createElement("li");
+item.textContent = "Nouvel élément";
+liste.appendChild(item);
+// Après : <ul id="maListe"><li>Nouvel élément</li></ul>
 ```
 
-### Supprimer un élément 
+### Supprimer un élément
 
 ```javascript
-// Avant : <p id="aSupprimer">Texte à supprimer</p>
-const elementASupprimer = document.getElementById("aSupprimer");
-elementASupprimer.parentNode.removeChild(elementASupprimer);
-// Après : (l'élément <p> est supprimé du DOM)
+// Avant : <p id="aSupprimer">Texte à enlever</p>
+const aSupprimer = document.getElementById("aSupprimer");
+aSupprimer.remove();
+// Après : (le <p> a disparu du DOM)
 ```
 
-### Supprimer des enfants
+### Ajouter un supprimer une classes CSS
 
 ```javascript
-// Avant : <div id="boutons"><button>Bouton1</button><button>Bouton2</button><button>Bouton3</button></div>
-const parent = document.getElementById("boutons");
-while (parent.firstChild) {
-  parent.removeChild(parent.firstChild);
-}
-// Après : <div id="boutons"></div>
+// Avant : <div id="monDiv" class="ancien"></div>
+const bloc = document.getElementById("monDiv");
+bloc.classList.add("actif");
+bloc.classList.remove("ancien");
+// Après : <div id="monDiv" class="actif"></div>
+
+console.log(bloc.classList.contains("actif")); 
+// Résultat : true
 ```
 
-### Supprimer tout sous un parent 
+!!! info "Différences à connaître"
 
-```javascript
-// Avant : <div id="boutons"><button>Bouton1</button><button>Bouton2</button><button>Bouton3</button></div>
-const parent = document.getElementById("boutons");
-parent.innerHTML = '';
-// Après : <div id="boutons"></div>
-```
-
-### Modifier les attributs d'un élément
-
-```javascript
-// Avant : <img id="monImage" src="image.jpg" alt="Image">
-const image = document.getElementById("monImage");
-image.src = "nouvelle-image.jpg";
-image.alt = "Nouvelle image";
-// Après : <img id="monImage" src="nouvelle-image.jpg" alt="Nouvelle image">
-```
-
-### Ajouter, supprimer ou questionner la présence de classe CSS
-
-```javascript
-// Avant : <div id="monDiv" class="ancienneClasse"></div>
-const div = document.getElementById("monDiv");
-div.classList.remove("ancienneClasse");
-div.classList.add("nouvelleClasse");
-// Après : <div id="monDiv" class="nouvelleClasse"></div>
-
-const monBool = div.classList.contains("nouvelleClasse");
-// retourne : true
-```
+    - `textContent` → texte brut (inclut le texte caché)  
+    - `innerText` → texte visible seulement  
+    - `innerHTML` → contenu HTML interne (avec balises)  
+    - `outerHTML` → l’élément complet (balises + contenu)  
 
 ![](./assets/images/split3.jpg)
 
