@@ -32,31 +32,74 @@ function exempleLet() {
 
 ## 2. Sélecteurs
 
-Les sélecteurs servent à **sélectionner un élément du HTML** pour le modifier.
+Les sélecteurs servent à **sélectionner un élément du HTML** pour le modifier avec JavaScript.
 
-- `getElementById("id")` → sélectionne un seul élément avec le id indiqué
-- `getElementsByClassName("classe")` → sélectionne plusieurs éléments qui ont la même classe 
-- `querySelector(".classe")` → sélectionne le premier qui correspond au sélecteur CSS  
-- `querySelectorAll(".classe")` → sélectionne tous les éléments correspondants
-- `children` → sélectionne les enfants directs (voir exemple ci-bas)
+Voici un exemple de code HTML de départ :
 
 ```html
 <div id="parent">
   <p class="texte">Blade</p>
   <p class="texte">Runner</p>
+  <span name="auteur">Ridley Scott</span>
 </div>
 ```
 
-```javascript
-const parent = document.getElementById("parent"); 
-const premier = document.querySelector(".texte"); // <p>Bonjour</p>
-const tous = document.querySelectorAll(".texte"); // liste avec Bonjour + Salut
+### `getElementById("id")`
 
-// Exemple de sélection avec "children"
-const enfants = parent.children; 
-console.log(enfants[0]); // <p class="texte">Bonjour</p>
-console.log(enfants[1]); // <p class="texte">Salut</p>
+Sélectionne **un seul élément** avec l’`id` indiqué.
+
+```javascript
+const parent = document.getElementById("parent");
+console.log(parent); 
+// Résultat : <div id="parent">...</div>
 ```
+
+### `getElementsByClassName("classe")`
+
+Sélectionne **tous les éléments qui ont la même classe**. Retourne une liste (HTMLCollection) !
+
+```javascript
+const textes = document.getElementsByClassName("texte");
+console.log(textes[0]);
+// Résultat : <p class="texte">Blade</p>
+console.log(textes[1]);
+// Résultat : <p class="texte">Runner</p>
+```
+
+### `querySelector(".classe")`
+
+Sélectionne **le premier élément** qui correspond au sélecteur CSS.
+
+```javascript
+const texte = document.querySelector(".texte");
+console.log(texte); 
+// Résultat : <p class="texte">Blade</p>
+```
+
+### `querySelectorAll(".classe")`
+
+Sélectionne **tous les éléments** qui correspondent au sélecteur CSS. Retourne une liste (NodeList) !
+
+```javascript
+const textes = document.querySelectorAll(".texte");
+console.log(textes[0]); 
+// Résultat : <p class="texte">Blade</p>
+console.log(textes[1]); 
+// Résultat : <p class="texte">Runner</p>
+```
+
+### `children`
+Sélectionne les **enfants directs** d’un élément parent. Retourne une liste (HTMLCollection) !
+
+```javascript
+const parent = document.getElementById("parent");
+const enfants = parent.children; 
+console.log(enfants[0]); 
+// Résultat : <p class="texte">Blade</p>
+console.log(enfants[1]); 
+// Résultat : <p class="texte">Runner</p>
+```
+
 
 ![](./assets/images/split4.jpg)
 
