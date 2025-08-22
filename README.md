@@ -156,6 +156,7 @@ Les boucles [while](https://www.w3schools.com/js/js_loop_while.asp) fonctionnent
 
 > [!NOTE]
 > Petite référence en ce qui concerne la sélection du contenu d'un élément
+> 
 > `textContent` → texte brut (inclut le texte caché)  
 > `innerText` → texte visible seulement  
 > `innerHTML` → contenu HTML interne (avec balises)  
