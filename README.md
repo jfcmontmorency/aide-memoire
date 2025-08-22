@@ -28,75 +28,34 @@ function exempleLet() {
 }
 ```
 
-👉 **Conseil : utilisez `let` (ou `const`) au lieu de `var`.**
-
 ![](./assets/images/split2.jpg)
 
-## Sélecteurs
+## 2. Sélecteurs
 
-### getElementById
+Les sélecteurs servent à **sélectionner un élément du HTML** pour le modifier.
 
-```javascript
-// <div id="monElement"></div>
-const element = document.getElementById("monElement");
-// Type : Element
+- `getElementById("id")` → sélectionne un seul élément avec le id indiqué
+- `getElementsByClassName("classe")` → sélectionne plusieurs éléments qui ont la même classe 
+- `querySelector(".classe")` → sélectionne le premier qui correspond au sélecteur CSS  
+- `querySelectorAll(".classe")` → sélectionne tous les éléments correspondants
+- `children` → sélectionne les enfants directs (voir exemple ci-bas)
+
+```html
+<div id="parent">
+  <p class="texte">Blade</p>
+  <p class="texte">Runner</p>
+</div>
 ```
 
-### getElementsByClassName
-
 ```javascript
-// <div class="maClasse"></div>
-// <div class="maClasse"></div>
-const elements = document.getElementsByClassName("maClasse");
-// Type : HTMLCollection
-```
+const parent = document.getElementById("parent"); 
+const premier = document.querySelector(".texte"); // <p>Bonjour</p>
+const tous = document.querySelectorAll(".texte"); // liste avec Bonjour + Salut
 
-### getElementsByTagName
-
-```javascript
-// <p>Paragraphe 1</p>
-// <p>Paragraphe 2</p>
-// <p>Paragraphe 3</p>
-const paragraphs = document.getElementsByTagName("p");
-// Type : HTMLCollection
-```
-
-### querySelector
-
-```javascript
-// <div class="maClasse"></div> <- Sélectionné
-// <div class="maClasse"></div> <- Non sélectionné
-const element = document.querySelector(".maClasse");
-// Type : Element
-```
-
-### querySelectorAll
-
-```javascript
-// <div class="maClasse"></div>
-// <div class="maClasse"></div>
-const elements = document.querySelectorAll(".maClasse");
-// Type : NodeList
-```
-
-### getElementsByName
-
-```javascript
-// <input type="text" name="monNom" value="Input avec nom">
-const element = document.getElementsByName("monNom")[0];
-// Type : NodeList (utilisé principalement pour les éléments de formulaire)
-```
-
-### children
-
-```javascript
-// <div id="parent">
-//   <div>Enfant 1</div>
-//   <div>Enfant 2</div>
-// </div>
-const parentElement = document.getElementById("parent");
-const enfants = parentElement.children;
-// Type : HTMLCollection
+// Exemple de sélection avec "children"
+const enfants = parent.children; 
+console.log(enfants[0]); // <p class="texte">Bonjour</p>
+console.log(enfants[1]); // <p class="texte">Salut</p>
 ```
 
 ![](./assets/images/split4.jpg)
