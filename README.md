@@ -154,6 +154,13 @@ Les boucles [while](https://www.w3schools.com/js/js_loop_while.asp) fonctionnent
 
 ## Manipulation du DOM (HTML)
 
+> [!NOTE]
+> Petite référence en ce qui concerne la sélection du contenu d'un élément
+> `textContent` → texte brut (inclut le texte caché)  
+> `innerText` → texte visible seulement  
+> `innerHTML` → contenu HTML interne (avec balises)  
+> `outerHTML` → l’élément complet (balises + contenu)  
+
 ### Modifier du texte
 
 ```javascript
@@ -204,12 +211,6 @@ bloc.classList.remove("ancien");
 console.log(bloc.classList.contains("actif")); 
 // Résultat : true
 ```
-
-> [!TIP]
-> `textContent` → texte brut (inclut le texte caché)  
-> `innerText` → texte visible seulement  
-> `innerHTML` → contenu HTML interne (avec balises)  
-> `outerHTML` → l’élément complet (balises + contenu)  
 
 ![](./assets/images/split3.jpg)
 
