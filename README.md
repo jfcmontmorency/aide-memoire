@@ -281,7 +281,7 @@ monElement.addEventListener('click', function() {
 ## POO 💩 (Programmation Orientée Objet)
 
 La programmation orientée objet est très utile pour organiser sa programmation, **mais ça ne sert pas qu'à cela**.  
-Elle permet aussi de **réutiliser du code**, de **faciliter la maintenance**, d’**encapsuler des données** et de mieux représenter des concepts du monde réel (ex. un Animal, une Voiture, un Utilisateur).
+Elle permet aussi de **réutiliser du code**, de **faciliter la maintenance**, d’**encapsuler des données** et de mieux représenter des concepts du monde réel (ex. un animal, une voiture ou un utilisateur).
 
 ### Classe et instance
 
