@@ -338,7 +338,7 @@ class Chien extends Mammifere { // on assigne une parentalité
 }
 
 const milou = new Chien("Milou", "blanc", "Fox Terrier");
-milou.parler();       // Résultat : Milou aboie 🐶
-milou.allaiter();     // Résultat : Milou allaite ses petits.
+milou.parler();          // Résultat : Milou aboie 🐶
+milou.allaiter();        // Résultat : Milou allaite ses petits.
 console.log(milou.type); // Résultat : "Chien"
 ```
