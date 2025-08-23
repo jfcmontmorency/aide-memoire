@@ -6,9 +6,9 @@
 
 Une **variable** c'est comme une boîte dans laquelle on range une valeur.
 
-- `var` : (ancienne façon) La variable existe partout dans la fonction
-- `let` : La variable n’existe **que dans le bloc** où elle est créée. Plus sécuritaire.  
-- `const` : La variable agit comme let, mais ne peut être remplacée par une autre valeur dans le code.
+- `var` 🙅 : (ancienne façon) La variable existe partout dans la fonction
+- `let` ✅ : La variable n’existe **que dans le bloc** où elle est créée. Plus sécuritaire.  
+- `const` ✅ : La variable agit comme let, mais ne peut être remplacée par une autre valeur dans le code.
 
 ```javascript
 // Exemple avec var
