@@ -180,7 +180,7 @@ div.innerHTML = "<strong>Texte en gras</strong>";
 // Après : <div id="monDiv"><strong>Texte en gras</strong></div>
 ```
 
-### Ajouter un élément
+### Ajouter un élément HTML
 
 ```javascript
 // Avant : <ul id="maListe"></ul>
@@ -191,7 +191,7 @@ liste.appendChild(item);
 // Après : <ul id="maListe"><li>Nouvel élément</li></ul>
 ```
 
-### Supprimer un élément
+### Supprimer un élément HTML
 
 ```javascript
 // Avant : <p id="aSupprimer">Texte à enlever</p>
@@ -200,7 +200,34 @@ aSupprimer.remove();
 // Après : (le <p> a disparu du DOM)
 ```
 
-### Ajouter un supprimer une classes CSS
+### Accéder à la valeur d'un attribut
+
+```javascript
+// <img id="monImage" src="citrouille.jpg" alt="Citrouille verte avec trois yeux.">
+const image = document.getElementById("monImage");
+console.log( image.getAttribute("src") );  
+// Résultat : "citrouille.jpg"
+```
+
+### Modifier un attribut
+
+```javascript
+// Avant : <img id="monImage" src="citrouille.jpg" alt="Citrouille verte avec trois yeux.">
+const image = document.getElementById("monImage");
+image.setAttribute("src", "olives.jpg");
+// Après : <img id="monImage" src="olives.jpg" alt="Citrouille verte avec trois yeux.">
+```
+
+### `removeAttribute("nom")` → supprimer un attribut
+
+```javascript
+// Avant : <img id="monImage" src="citrouille.jpg" alt="Citrouille verte avec trois yeux.">
+const image = document.getElementById("monImage");
+image.removeAttribute("alt");
+// Après : <img id="monImage" src="citrouille.jpg">
+```
+
+### Ajouter / supprimer une classes CSS
 
 ```javascript
 // Avant : <div id="monDiv" class="ancien"></div>
