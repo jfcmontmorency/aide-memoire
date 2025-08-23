@@ -269,7 +269,7 @@ bouton.removeEventListener("click", clicHandler);
 `this` est un mot-clé magique en JavaScript qui fait référence à l'élément de son contexte 😅
 
 ```javascript
-//<div id="ok" class="bye">Cliquez sur moi !</div>
+// <div id="ok" class="bye">Clic moi !</div>
 const monElement = document.getElementById('ok');
 monElement.addEventListener('click', function() {
   const sonId = this.id; // 'ok'
@@ -296,7 +296,7 @@ class Animal {
 }
 
 const chien = new Animal("Rex");
-chien.parler(); // Rex fait du bruit.
+chien.parler(); // Résultat : Rex fait du bruit.
 ```
 
 ### Héritage
@@ -314,7 +314,7 @@ class Animal {
 }
 
 // Classe intermédiaire
-class Mammifere extends Animal {
+class Mammifere extends Animal { // on assigne une parentalité
   constructor(nom, couleurPoil) {
     super(nom); // on appelle le constructeur de Animal
     this.type = "Mammifère";
@@ -326,7 +326,7 @@ class Mammifere extends Animal {
 }
 
 // Classe héritée d'un mammifère
-class Chien extends Mammifere {
+class Chien extends Mammifere { // on assigne une parentalité
   constructor(nom, couleurPoil, race) {
     super(nom, couleurPoil); // on appelle le constructeur de Mammifere
     this.type = "Chien";
@@ -338,7 +338,7 @@ class Chien extends Mammifere {
 }
 
 const milou = new Chien("Milou", "blanc", "Fox Terrier");
-milou.parler();       // Milou aboie 🐶
-milou.allaiter();     // Milou allaite ses petits.
-console.log(milou.type); // "Chien"
+milou.parler();       // Résultat : Milou aboie 🐶
+milou.allaiter();     // Résultat : Milou allaite ses petits.
+console.log(milou.type); // Résultat : "Chien"
 ```
