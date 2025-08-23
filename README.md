@@ -277,3 +277,68 @@ monElement.addEventListener('click', function() {
   this.classList.add('highlight'); // Ajoute une classe "highlight" à l'élément
 });
 ```
+
+## POO 💩 (Programmation Orientée Objet)
+
+La programmation orientée objet est très utile pour organiser sa programmation, **mais ça ne sert pas qu'à cela**.  
+Elle permet aussi de **réutiliser du code**, de **faciliter la maintenance**, d’**encapsuler des données** et de mieux représenter des concepts du monde réel (ex. un Animal, une Voiture, un Utilisateur).
+
+### Classe et instance
+
+```javascript
+class Animal {
+  constructor(nom) {
+    this.nom = nom;
+  }
+  parler() {
+    console.log(`${this.nom} fait du bruit.`);
+  }
+}
+
+const chien = new Animal("Rex");
+chien.parler(); // Rex fait du bruit.
+```
+
+### Héritage
+
+```js
+// Classe de base
+class Animal {
+  constructor(nom) {
+    this.nom = nom;
+    this.type = "Animal";
+  }
+  parler() {
+    console.log(`${this.nom} fait du bruit.`);
+  }
+}
+
+// Classe intermédiaire
+class Mammifere extends Animal {
+  constructor(nom, couleurPoil) {
+    super(nom); // on appelle le constructeur de Animal
+    this.type = "Mammifère";
+    this.couleurPoil = couleurPoil;
+  }
+  allaiter() {
+    console.log(`${this.nom} allaite ses petits.`);
+  }
+}
+
+// Classe héritée d'un mammifère
+class Chien extends Mammifere {
+  constructor(nom, couleurPoil, race) {
+    super(nom, couleurPoil); // on appelle le constructeur de Mammifere
+    this.type = "Chien";
+    this.race = race;
+  }
+  parler() {
+    console.log(`${this.nom} aboie 🐶`);
+  }
+}
+
+const milou = new Chien("Milou", "blanc", "Fox Terrier");
+milou.parler();       // Milou aboie 🐶
+milou.allaiter();     // Milou allaite ses petits.
+console.log(milou.type); // "Chien"
+```
