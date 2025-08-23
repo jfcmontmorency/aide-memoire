@@ -239,13 +239,14 @@ bouton.removeEventListener("click", clicHandler);
 
 ## This
 
-`this` est un mot-clé en JavaScript qui fait référence à l'élément de son contexte 😅
+`this` est un mot-clé magique en JavaScript qui fait référence à l'élément de son contexte 😅
 
 ```javascript
-//<div id="monElement">Cliquez sur moi !</div>
-const monElement = document.getElementById('monElement');
+//<div id="ok" class="bye">Cliquez sur moi !</div>
+const monElement = document.getElementById('ok');
 monElement.addEventListener('click', function() {
-  const id = this.id; // 'monElement'
+  const sonId = this.id; // 'ok'
+  const saClasse = this.className; // 'bye'
   this.classList.add('highlight'); // Ajoute une classe "highlight" à l'élément
 });
 ```
