@@ -88,7 +88,7 @@ console.log(textes[1]);
 // Résultat : <p class="texte">Runner</p>
 ```
 
-### `children`
+### `children` 🧑‍🧒
 Sélectionne les **enfants directs** d’un élément parent. Retourne une liste (HTMLCollection) !
 
 ```javascript
