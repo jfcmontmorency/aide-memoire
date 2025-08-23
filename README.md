@@ -313,8 +313,8 @@ class Animal {
   }
 }
 
-// Classe intermédiaire
-class Mammifere extends Animal { // on assigne une parentalité
+// Classe héritée d'un animal
+class Mammifere extends Animal {
   constructor(nom, couleurPoil) {
     super(nom); // on appelle le constructeur de Animal
     this.type = "Mammifère";
@@ -326,7 +326,7 @@ class Mammifere extends Animal { // on assigne une parentalité
 }
 
 // Classe héritée d'un mammifère
-class Chien extends Mammifere { // on assigne une parentalité
+class Chien extends Mammifere {
   constructor(nom, couleurPoil, race) {
     super(nom, couleurPoil); // on appelle le constructeur de Mammifere
     this.type = "Chien";
