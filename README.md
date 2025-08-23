@@ -24,7 +24,7 @@ function exempleLet() {
   if (true) {
     let message = "Hello, let!";
   }
-  // console.log(message); // Erreur ! message n’existe plus
+  // console.log(message); // message is not defined (message n’existe par ici)
 }
 ```
 
