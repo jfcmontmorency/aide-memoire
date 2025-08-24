@@ -337,8 +337,8 @@ class Chien extends Mammifere {
   }
 }
 
-const milou = new Chien("Milou", "blanc", "Fox Terrier");
-milou.parler();          // Résultat : Milou aboie 🐶
-milou.allaiter();        // Résultat : Milou allaite ses petits.
-console.log(milou.type); // Résultat : "Chien"
+const croquette = new Chien("Croquette", "blanc", "Fox Terrier");
+croquette.parler();          // Résultat : Croquette aboie 🐶
+croquette.allaiter();        // Résultat : Croquette allaite ses petits.
+console.log(croquette.type); // Résultat : "Chien"
 ```
